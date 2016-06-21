@@ -23,5 +23,5 @@
 
 - name: sudo | Create sudoers.d files
   template: src=sudoers.d.j2 dest="/etc/sudoers.d/{{ item.name }}" mode=0440 owner=root group=root validate="/usr/sbin/visudo -cf %s"
-  with_items: sudo_sudoers_d
+  with_items: "{{sudo_sudoers_d}}"
   tags: sudo

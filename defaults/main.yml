@@ -6,6 +6,7 @@ sudo_defaults:
   - mail_badpass
   - env_reset
   - env_keep+=SSH_AUTH_SOCK
+  - env_keep+=TEMP
   - secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 sudo_sudoers:
   - name: "%sudo"

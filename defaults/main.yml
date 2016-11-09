@@ -1,5 +1,5 @@
 ---
-sudo_defaults:
+sudo_defaults_base:
   - "!requiretty"
   - "!visiblepw"
   - always_set_home
@@ -7,6 +7,9 @@ sudo_defaults:
   - env_reset
   - env_keep+=SSH_AUTH_SOCK
   - secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+sudo_defaults_extend: []
+sudo_defaults: "{{ sudo_defaults_base + sudo_defaults_extend }}"
+
 sudo_sudoers:
   - name: "%sudo"
     nopasswd: true

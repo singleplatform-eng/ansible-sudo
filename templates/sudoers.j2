@@ -10,28 +10,28 @@ Defaults {{ defaults }}
 
 # Command aliases
 {% if sudo_cmndalias is defined %}
-{% for name, alias in sudo_cmndalias.iteritems() %}
+{% for name, alias in sudo_cmndalias.items() %}
 Cmnd_Alias {{ name }} = {{ alias }}
 {% endfor %}
 {% endif %}
 
 # Host aliases
 {% if sudo_hostalias is defined %}
-{% for name, alias in sudo_hostalias.iteritems() %}
+{% for name, alias in sudo_hostalias.items() %}
 Host_Alias {{ name }} = {{ alias }}
 {% endfor %}
 {% endif %}
 
 # User aliases
 {% if sudo_useralias is defined %}
-{% for name, alias in sudo_useralias.iteritems() %}
+{% for name, alias in sudo_useralias.items() %}
 User_Alias {{ name }} = {{ alias }}
 {% endfor %}
 {% endif %}
 
 # Run As aliasses
 {% if sudo_runasalias is defined %}
-{% for name, alias in sudo_runasalias.iteritems() %}
+{% for name, alias in sudo_runasalias.items() %}
 Runas_Alias {{ name }} = {{ alias }}
 {% endfor %}
 {% endif %}
